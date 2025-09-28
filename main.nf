@@ -1,5 +1,5 @@
 process FOO {
-  container 'mribeirodantas/print2certificates:latest'
+  container 'community.wave.seqera.io/library/pillow:8.4.0--f2b8dd7ddc55c40e'
   publishDir 'output', mode: 'copy'
   tag "${participant_name}"
 
@@ -14,7 +14,7 @@ process FOO {
 
   script:
   """
-  #!/usr/local/bin/python3
+  #!/opt/conda/bin/python3
 
   from PIL import Image, ImageFont, ImageDraw
 
